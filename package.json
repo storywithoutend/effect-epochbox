@@ -1,0 +1,48 @@
+{
+  "name": "effect-epochbox",
+  "version": "0.1.0",
+  "description": "Effect-native historical multi-repository sandboxes for agent evaluation",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storywithoutend/effect-epochbox.git"
+  },
+  "homepage": "https://github.com/storywithoutend/effect-epochbox#readme",
+  "bugs": {
+    "url": "https://github.com/storywithoutend/effect-epochbox/issues"
+  },
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "effect-epochbox": "./dist/cli.js"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "test:real": "EPOCHBOX_REAL_SBX=1 vitest run test/real-sbx.test.ts",
+    "prepublishOnly": "npm run check && npm test && npm run build"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "effect": "3.22.2",
+    "effect-agent-bind": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "tsx": "^4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "5.0.1"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.epochbox/
+coverage/
+.audit/
+*.log
+*.tgz
+.DS_Store
