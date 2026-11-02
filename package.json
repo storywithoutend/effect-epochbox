@@ -14,7 +14,7 @@
   },
   "types": "./dist/index.d.ts",
   "bin": {
-    "effect-epochbox": "./dist/cli.js"
+    "effect-epochbox": "dist/cli.js"
   },
   "exports": {
     ".": "./dist/index.js"
